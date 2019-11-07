@@ -58,7 +58,7 @@ void loop() {
     unsigned long heart_time = millis() + HEART_DELAY;
     digitalWrite(LED_BUILTIN, heart_state);
 
-    unsigned long tone_start = millis() + 1000/NOTE_DURATION * 1.30;
+    unsigned long tone_end = millis() + 325; // equal to 1300/NOTE_DURATION;
 
     while (true) {
         // switch heartbeat LED
@@ -72,6 +72,7 @@ void loop() {
             // time to reset
             long new_led = random(2); // inclusive, so must be 3
             on_time = millis() + 1000 * random(MIN_TIME, MAX_TIME+1); // inclusive, so add 1
+            tone_end = millis() + 325; // equal to 1300/NOTE_DURATION;
 
             switch (curr_led){
                 case 0:
