@@ -37,7 +37,7 @@ const int HEART_DELAY = 1000; // in ms
 // selects random time t in seconds 
 // between min and max, to nearest second
 const int MIN_TIME =  3;
-const int MAX_TIME = 7;
+const int MAX_TIME = 5;
 
 void setup() {
     // initialize LED pins as outputs
